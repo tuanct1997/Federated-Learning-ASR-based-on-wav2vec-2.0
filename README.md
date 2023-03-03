@@ -1,33 +1,33 @@
 # Federated-Learning-ASR-based-on-wav2vec-2.0
 
-This works presents the source code using A [Federated Learning (FL) in ASR domain based on Wav2Vec 2.0 model](https://arxiv.org/pdf/2302.10790.pdf) [1]. This approach has been proved that can overcome non-IID problem which usually oberserve in FL scenario thanks to the power of Self-supervised learning (SSL) in general or Wav2Vec 2.0 in particular. An experiment was conducted on TED-LIUM 3 dataset and provide a promissing ASR performance with word error rate of 10.92%.
+This works presents the source code using [Federated Learning (FL) in ASR domain based on Wav2Vec 2.0 model](https://arxiv.org/pdf/2302.10790.pdf) [1]. This approach has been proved that can overcome non-IID problem which usually oberserve in FL scenario thanks to the power of Self-supervised learning (SSL) in general or Wav2Vec 2.0 in particular. An experiment was conducted on TED-LIUM 3 dataset and provide a promissing ASR performance with word error rate of 10.92%, without sharing any data from the different users. We also anaylyzed the ASR performance at speaker level and it's ability to protect speaker identity.
 
-The repository itself combines A [Flower](https://flower.dev) and A [Speechbrain](https://speechbrain.github.io) to achieve training ASR models in FL setting. It was an extension forward from A [Flower-SpeechBrain]https://github.com/yan-gao-GY/Flower-SpeechBrain) repository which apply directly the used of Wav2Vec 2.0 and simulate the FL on the same machine.
+The repository itself combines [Flower](https://flower.dev) and [Speechbrain](https://speechbrain.github.io) to achieve training ASR models in FL setting. It was an extension forward from [Flower-SpeechBrain]https://github.com/yan-gao-GY/Flower-SpeechBrain) repository which apply directly the used of Wav2Vec 2.0 and simulate the FL on the same machine. 
 
 
 > *[1]Tuan Nguyen, Salima Mdhaffar, Natalia Tomashenko, Jean-François Bonastre, and Yannick Estève. 2023. Federated Learning for ASR based on Wav2vec 2.0 in ICASSP 2023*
 
-Detailed descriptions of experiments and results are given in on our paper here : A [link](https://arxiv.org/abs/2302.10790)
+Detailed descriptions of experiments and results are given in on our paper here : [link](https://arxiv.org/abs/2302.10790)
 
 
 ## Acknowledgements
 
 We would love to express our gratitude toFrench National Research Agency (ANR) since the project was funded by them in the context of project DEEP-PRIVACY. 
-Also, we would love to express our sincere thanks to A [Laboratoire Informatique d'Avignon](https://liavignon.fr) and Avignon Université for providing us with all necessary facilities to conduct the research.
+Also, we would love to express our sincere thanks to [Laboratoire Informatique d'Avignon](https://liavignon.fr) and Avignon Université for providing us with all necessary facilities to conduct the research.
 
 ## Requirements
 
-*Flower <=0.18.0, >= 0.17.0
+* Flower <=0.18.0, >= 0.17.0
 
-*Speechbrain
+* Speechbrain
 
-*Pytorch >= 1.5.0
+* Pytorch >= 1.5.0
 
-*Python >=3.7.0
+* Python >=3.7.0
 
-*Ray-proxy
+* Ray-proxy
 
-*Torchaudio
+* Torchaudio
 
 ## Data Structure
 ```bash
