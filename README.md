@@ -13,7 +13,7 @@ Detailed descriptions of experiments and results are given in on our paper here 
 ## Acknowledgements
 
 We would love to express our gratitude toFrench National Research Agency (ANR) since the project was funded by them in the context of project DEEP-PRIVACY. 
-Also, we would love to express our sincere thanks to Laboratoire Informatique d'Avignon and Avignon Université for providing us with all necessary facilities to conduct the research.
+Also, we would love to express our sincere thanks to A [Laboratoire Informatique d'Avignon](https://liavignon.fr) and Avignon Université for providing us with all necessary facilities to conduct the research.
 
 ## Requirements
 
