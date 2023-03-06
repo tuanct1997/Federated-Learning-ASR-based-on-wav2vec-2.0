@@ -1,0 +1,4 @@
+/data/*.csv
+/data/*/*upper.csv
+/data/*/*common.csv
+/data/*/*_mcadam*
