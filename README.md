@@ -29,10 +29,17 @@ Also, we would love to express our sincere thanks to [Laboratoire Informatique d
 
 * Torchaudio
 
+* Pandas
+
+*numpy <= 1.23.0
+
 * GPUs: mem >= 24Gb
 
 ## Data Structure
 Below is strucutre recommended to adapt the code. A data folder contains all processed csv files is provided for community to re-produce the result of paper. All audio files could be find at [TED-LIUM 3 website](https://projets-lium.univ-lemans.fr/ted-lium/release3/)  (Please change the path in csv file to your actual audio path)
+
+You can also run the provided script *data_prepare.py* to download audio and change the csv path
+
 ```bash
 ├── data (provided)
 │   ├── client_{cid}
@@ -71,18 +78,17 @@ Due to the size of Wav2Vec 2.0 model and dataset, highly recommend to enavle dev
 Simply run this command below (example):
 ```bash
 python fl_w2v.py \
-  --data_path= "...../Data" \
+  --data_path="./data" \
   --config_path="./configs/w2v2.yaml" \
   --min_fit_clients=2 \
-  --eval_device="cpu" \
+  --running_type="cpu" \
   --min_available_clients=2 \
-  --save_path_pre="./Output/" \
+  --output="./output/" \
   --fraction_fit=0.01 \
   --rounds=2 \
   --parallel_backend=True \
-  --pre_train_model_path="..../Material/model.ckpt" \
+  --pre_train_model_path="..../material/model.ckpt" \
   --label_path="/users/tnguyen/Federated_learning/results/mcadam/1234/save/label_encoder.txt" \
-  --device = "cpu" \
   --local_epochs=1
 
 where: 
