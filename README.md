@@ -31,9 +31,10 @@ Also, we would love to express our sincere thanks to [Laboratoire Informatique d
 
 * Pandas
 
-*numpy <= 1.23.0
+* numpy <= 1.23.0
 
 * GPUs: mem >= 24Gb
+* Transformer
 
 ## Data Structure
 Below is strucutre recommended to adapt the code. A data folder contains all processed csv files is provided for community to re-produce the result of paper. All audio files could be find at [TED-LIUM 3 website](https://projets-lium.univ-lemans.fr/ted-lium/release3/)  (Please change the path in csv file to your actual audio path)
