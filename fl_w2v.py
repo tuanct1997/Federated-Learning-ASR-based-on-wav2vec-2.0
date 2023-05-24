@@ -57,7 +57,7 @@ parser.add_argument('--label_path', type=str, default=None,help='path for label 
 parser.add_argument('--config_path', type=str, default="./configs/", help='path to yaml file')
 parser.add_argument('--running_type', type=str, default="cpu", help='running type of FL ')
 parser.add_argument("--min_fit_clients", type=int, default=10, help="minimum fit clients")
-parser.add_argument("--fraction_fit", type=int, default=10, help="ratio of total clients will be trained")
+parser.add_argument("--fraction_fit", type=float, default=0.01, help="ratio of total clients will be trained")
 parser.add_argument("--min_available_clients", type=int, default=10, help="minmum available clients")
 parser.add_argument("--rounds", type=int, default=30, help="global training rounds")
 parser.add_argument("--local_epochs", type=int, default=5, help="local epochs on each client")
