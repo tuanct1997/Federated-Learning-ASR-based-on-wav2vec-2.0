@@ -80,7 +80,6 @@ class SpeechBrainClient(fl.client.Client):
         self.dataset = dataset
 
         fl.common.logger.log(logging.DEBUG, "Starting client %s", cid)
-        print("HOOOOO HEEYYYYEYEYEYYEYEYEYEYE")
 
 
     def get_parameters(self) -> ParametersRes:
@@ -422,11 +421,11 @@ def int_model(
     if int(cid) != 19999:
         params["data_folder"] = os.path.join(data_path,"client_"+str(cid))
     else:
-        params["data_folder"] = os.path.join(data_path,"client_"+str(1300))
+        params["data_folder"] = os.path.join(data_path,"server")
 
 
-    params["train_csv"] = params["data_folder"] + "/ted_test.csv"
-    params["valid_csv"] = params["data_folder"] + "/ted_test.csv"
+    params["train_csv"] = params["data_folder"] + "/ted_train.csv"
+    params["valid_csv"] = params["data_folder"] + "/ted_dev.csv"
     params["test_csv"] = params["data_folder"] + "/ted_test.csv"
     
     params["label_encoder"] = label_path
