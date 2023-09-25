@@ -89,7 +89,7 @@ python fl_w2v.py \
   --rounds=2 \
   --parallel_backend=True \
   --pre_train_model_path="..../material/model.ckpt" \
-  --label_path="/users/tnguyen/Federated_learning/results/mcadam/1234/save/label_encoder.txt" \
+  --label_path="./material/label_encoder.txt" \
   --local_epochs=1
 
 where: 
@@ -97,6 +97,7 @@ where:
  - config_path: path to yaml file
  - min_fit_clients: the minium number of clients to involve in the training per round
  - fraction_fit : ratio number of client over total clients involve in the training per round
+ - min_available_clients : total available clients
  - svae_path_pre: output folder
  - rounds: Number of global round for FL
  - parallel_backend (default = True): If assign multiple GPUs per client

@@ -55,21 +55,17 @@ def delete_file(filename):
 
 #Change the path corespond to your actual path    
 def csv_path_audio(path):
-    for i in range(1983):
-        df_train = pd.read_csv(f"./data/client_{i}/ted_train.csv")
-        df_dev = pd.read_csv(f"./data/client_{i}/ted_dev.csv")
-        df_test = pd.read_csv(f"./data/client_{i}/ted_test.csv")
-        df_train["wav"] = df_train["wav"].str.replace("/local_disk/idyie/tnguyen/TEDLIUM_release-3/legacy/train/sph/",path)
-        df_dev["wav"] = df_dev["wav"].str.replace("/local_disk/idyie/tnguyen/TEDLIUM_release-3/legacy/train/sph/",path)
-        df_test["wav"] = df_test["wav"].str.replace("/local_disk/idyie/tnguyen/TEDLIUM_release-3/legacy/train/sph/",path)
-        df_train.to_csv(f"./data/client_{i}/ted_train.csv",index = False)
-        df_dev.to_csv(f"./data/client_{i}/ted_dev.csv", index = False)
-        df_test.to_csv(f"./data/client_{i}/ted_test.csv", index = False)
+    for subdir, dirs, files in os.walk("./data"):
+        for file in files:
+            if file.endswith('.csv'):
+                df = pd.read_csv(os.path.join(subdir,file))
+                df["wav"] = df["wav"].str.replace("path", path)
+                df.to_csv(os.path.join(subdir,file), index = False)
 
 # CHANGE THE PATH CORESPOND TO YOUR PATH
 url = "https://projets-lium.univ-lemans.fr/wp-content/uploads/corpus/TED-LIUM/TEDLIUM_release-3.tgz"
 filename = "data/TEDLIUM_release-3.tgz"
-extract_path = "data/audio" # replace with the path to the directory where you want to extract the files
+extract_path = "path" # replace with the path to the directory where you want to extract the files
 
 
 try:
