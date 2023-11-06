@@ -1,5 +1,8 @@
 # Federated-Learning-ASR-based-on-wav2vec-2.0
 
+**This repository is now available as baseline at Flower library itself. This baseline is up-to-date with newest version of Flower and will be maintanance by Flower team. Please refer to this baseline [here](https://github.com/adap/flower/tree/main/baselines/fedwav2vec2). Due to this reason, this repository will not be updated anymore.** 
+
+----------------------------------
 This works presents the source code using [Federated Learning (FL) in ASR domain based on Wav2Vec 2.0 model](https://arxiv.org/pdf/2302.10790.pdf) [1]. This approach has been proved that can overcome non-IID problem which usually oberserve in FL scenario thanks to the power of Self-supervised learning (SSL) in general or Wav2Vec 2.0 in particular. An experiment was conducted on [TED-LIUM 3 ](https://lium.univ-lemans.fr/en/ted-lium3/) dataset and provide a promissing ASR performance with word error rate of 10.92%, without sharing any data from the different users. We also anaylyzed the ASR performance at speaker level and it's ability to protect speaker identity since the target of Federated Learning is to ensure the privacy. 
 
 The repository itself combines [Flower](https://flower.dev) and [Speechbrain](https://speechbrain.github.io) to achieve training ASR models in FL setting. It was an extension forward from [Flower-SpeechBrain](https://github.com/yan-gao-GY/Flower-SpeechBrain) repository which apply directly the used of Wav2Vec 2.0 and simulate the FL on the same machine. 
