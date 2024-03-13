@@ -110,14 +110,18 @@ where:
  - device (default = "cpu" - recommended): If "cpu", all clients and server are initialized on CPU and only pump to GPUs if needed in order to ensure enough GPUs memmory. If dataset is small or on small scale, could switch to "cuda" which will be faster (to avoid switing GPU and CPU time).
 ```
 ## Citation
-Please citation for your upcoming works if used
-```bash
-@misc{https://doi.org/10.48550/arxiv.2302.10790,
-doi = {10.48550/ARXIV.2302.10790},url = {https://arxiv.org/abs/2302.10790}, 
-author = {Nguyen, Tuan and Mdhaffar, Salima and Tomashenko, Natalia and Bonastre, Jean-François and Estève, Yannick}, 
-keywords = {Audio and Speech Processing (eess.AS), Machine Learning (cs.LG), Sound (cs.SD), FOS: Electrical engineering, electronic engineering, information engineering, FOS: Electrical engineering, electronic engineering, information engineering, FOS: Computer and information sciences, FOS: Computer and information sciences},
-title = {Federated Learning for ASR based on Wav2vec 2.0}, 
-publisher = {arXiv},year = {2023},
-copyright = {Creative Commons Attribution 4.0 International}}
+Please use below citations for your upcoming works if used:
 
+Original paper:
+```bibtex
+@INPROCEEDINGS{10096426,
+  author={Nguyen, Tuan and Mdhaffar, Salima and Tomashenko, Natalia and Bonastre, Jean-François and Estève, Yannick},
+  booktitle={ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={Federated Learning for ASR Based on wav2vec 2.0}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-5},
+  keywords={Analytical models;Privacy;Federated learning;Neural networks;Speech recognition;Signal processing;Linguistics;Federated learning;Automatic Speech Recognition;Self-supervised models;Privacy},
+  doi={10.1109/ICASSP49357.2023.10096426}}
 ```
